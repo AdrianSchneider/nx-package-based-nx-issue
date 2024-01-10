@@ -2,8 +2,7 @@
   "name": "is-even",
   "version": "0.0.0",
   "main": "dist/index.js",
-  "devDependencies": {},
-  "scripts": {
-    "build": "tsc index.ts --outDir dist"
+  "devDependencies": {
+    "@nx/js": "^17.2.8"
   }
 }
