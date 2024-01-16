@@ -1,14 +1,18 @@
 {
   "targets": {
+    "echo": {
+      "command": "echo {projectName}"
+    },
     "build": {
       "executor": "@nx/js:tsc",
       "dependsOn": [
         "^build"
       ],
       "options": {
-        "outputPath": "<projectDir>/dist",
-        "main": "<projectDir>/dist/index.js",
-        "tsConfig": "<workspaceDir>/tsconfig.json",
+        "outputPath": "{workspaceRoot}/dist/{projectName}",
+        "main": "{projectRoot}/index.ts",
+        "tsConfig": "{projectRoot}/tsconfig.json",
+        "_tsConfig": "{workspaceRoot}/tsconfig.json",
         "assets": []
       }
     }
